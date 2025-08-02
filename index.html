@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>horny.craft | Создатель мода ШАДИК</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Press Start 2P', cursive;
+            background: #1d1d1d url('https://textur.gas-kvas.com/uploads/posts/2024-10/textur-gas-kvas-com-z3oq-p-besshovnie-teksturi-zemli-pikselnaya-3.jpg') center/cover;
+            color: #fff;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 40px;
+            border-bottom: 4px solid #7d5e2a;
+            position: relative;
+        }
+        
+        .logo {
+            font-size: 3.5rem;
+            color: #ff6b00;
+            text-shadow: 4px 4px 0 #8b4000;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+        }
+        
+        .creator {
+            font-size: 1.2rem;
+            color: #ffd700;
+            background: rgba(0, 0, 0, 0.5);
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            margin: 30px 0;
+        }
+        
+        .social-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 12px 20px;
+            background: #4d2e00;
+            color: #ffd700;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            border: 2px solid #7d5e2a;
+            font-size: 0.9rem;
+        }
+        
+        .social-btn:hover {
+            background: #7d5e2a;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .social-btn i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .games-section {
+            margin: 40px 0;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 0 #8b4000;
+        }
+        
+        .game-card {
+            background: rgba(0, 0, 0, 0.7);
+            border: 4px solid #7d5e2a;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 40px;
+            transition: all 0.3s;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        .game-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            border-color: #ff6b00;
+        }
+        
+        .game-header {
+            background: #4d2e00;
+            padding: 15px;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #ffd700;
+            border-bottom: 3px solid #7d5e2a;
+        }
+        
+        .game-content {
+            padding: 25px;
+        }
+        
+        .screenshots {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .screenshot {
+            width: 100%;
+            max-width: 350px;
+            border: 3px solid #7d5e2a;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .screenshot:hover {
+            transform: scale(1.05);
+        }
+        
+        .download-links {
+            background: #4d2e00;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        
+        .download-title {
+            text-align: center;
+            margin-bottom: 15px;
+            color: #ffd700;
+        }
+        
+        .links-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #ff6b00;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            border: 2px solid #8b4000;
+            text-align: center;
+            min-width: 200px;
+        }
+        
+        .download-btn:hover {
+            background: #ff8c00;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .contact-info {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 25px;
+            border: 4px solid #7d5e2a;
+            border-radius: 10px;
+            max-width: 600px;
+            margin: 40px auto;
+            text-align: center;
+        }
+        
+        .contact-title {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .contact-link {
+            color: #ff6b00;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px 0;
+            padding: 8px 15px;
+            background: rgba(77, 46, 0, 0.5);
+            border-radius: 5px;
+        }
+        
+        .contact-link:hover {
+            color: #ffd700;
+            background: rgba(125, 94, 42, 0.7);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+            border-top: 4px solid #7d5e2a;
+            color: #ffd700;
+            font-size: 0.8rem;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2.5rem;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .screenshots {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .links-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">horny.craft</h1>
+            <div class="creator">Создатель мода: ШАДИК</div>
+            
+            <div class="social-links">
+                <a href="https://t.me/shadik_ru" class="social-btn" target="_blank">
+                    <i class="fab fa-telegram"></i> Telegram канал
+                </a>
+                <a href="https://discord.gg/gVGyAgehfb" class="social-btn" target="_blank">
+                    <i class="fab fa-discord"></i> Discord сервер
+                </a>
+                <a href="https://t.me/shadik_contact" class="social-btn" target="_blank">
+                    <i class="fab fa-telegram"></i> Связь в Telegram
+                </a>
+            </div>
+        </header>
+        
+        <section class="games-section">
+            <h2 class="section-title">Мои моды/игры</h2>
+            
+            <div class="game-card">
+                <div class="game-header">
+                    Horny Craft
+                </div>
+                
+                <div class="game-content">
+                    <div class="screenshots">
+                        <img src="https://s1.hostingkartinok.com/uploads/images/2025/08/90ba8e95a2906a0d9e8dcdc1ea77de3e.jpg" alt="Скриншот игры 1" class="screenshot">
+                        <img src="https://s1.hostingkartinok.com/uploads/images/2025/08/fa9b058106d8616dab025b33b39a1cec.jpg" alt="Скриншот игры 2" class="screenshot">
+                        <img src="https://s1.hostingkartinok.com/uploads/images/2025/08/e642d92ece8c3b1b3707a7dd5ccdfb6a.jpg" alt="Скриншот игры 3" class="screenshot">
+                    </div>
+                    
+                    <div class="download-links">
+                        <h3 class="download-title">Скачать игру</h3>
+                        <div class="links-container">
+                            <a href="https://disk.yandex.ru/d/J68eoaGNA_li-g" class="download-btn" target="_blank">
+                                <i class="fab fa-yandex"></i> Яндекс.Диск
+                            </a>
+                            <a href="https://mega.nz/folder/aMEnzShK#HbZifMvlTyIYTRiqs67tkA" class="download-btn" target="_blank">
+                                <i class="fas fa-database"></i> MEGA
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div class="contact-info">
+            <h3 class="contact-title">Связаться со мной</h3>
+            <a href="https://t.me/shadik_contact" class="contact-link" target="_blank">
+                <i class="fab fa-telegram"></i> Telegram: @shadik_contact
+            </a>
+        </div>
+        
+        <footer>
+            <p>© 2023 horny.craft | Все права защищены</p>
+            <p>Создатель: ШАДИК</p>
+        </footer>
+    </div>
+</body>
+  </html>
